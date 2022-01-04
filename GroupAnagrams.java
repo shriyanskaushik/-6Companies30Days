@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 class GroupAnagrams{
-    public List<List<String>> groupAnagrams(String[] strs) {
+    public static List<List<String>> groupAnagrams(String[] strs) {
         Map<Map<Character, Integer>, List<String>> map = new HashMap<>();
         for(int i = 0; i < strs.length; i++){
             String word = strs[i];
@@ -31,7 +31,14 @@ class GroupAnagrams{
         for(List<String> temp : map.values()){
             res.add(temp);
         }
-        
+
         return res;
+    }
+
+    public static void main(String[] args) {
+        String[] arr = {"eat","tea","tan","ate","nat","bat"};
+        List<List<String>> res = groupAnagrams(arr);
+        for(List<String> same : res)
+            System.out.println(same);
     }
 }
