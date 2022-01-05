@@ -1,5 +1,3 @@
-package GoldmanSachs;
-
 public class SubarraysProductLessThanK {
     public static int numSubarrayProductLessThanK(int[] nums, int k) {
         if (k <= 1) return 0;
